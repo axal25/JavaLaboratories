@@ -1,0 +1,26 @@
+git clone https://github.com/axal25/BareJS
+copy contents from https://github.com/axal25/CV/ 
+to local of your existing project
+git add *
+git config --global user.email login@gmail.com
+git commit -m "first commit from terminal"
+git remote add origin https://github.com/user_name/repository_name
+git remote -v
+git push -u origin master
+git pull origin master
+
+to remove a file:
+git rm <file>
+
+to host via github pages:
+* have index.html file in home directory of your repo directory (where .git is)
+* go to repository page ( example: https://axal25.github.io/BareJS/ )
+* go to settings
+* scroll down to 'Github pages'
+* choose Source (example: master branch)
+
+git ignore:
+* in folder of the repo (where .git is located)
+* touch .gitignore
+* edit .gitignore file and fill with patterns (example: ./out/* \n\r ./out)
+
