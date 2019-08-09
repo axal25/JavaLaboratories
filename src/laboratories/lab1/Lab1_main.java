@@ -11,7 +11,9 @@ public class Lab1_main
 
     public static void main()
     {
-        System.out.println("Lab1_main.main() \\/\\/\\/");
+        final String functionName = "main()";
+        final String location = Lab1_main.class.getName() + " >>> " + functionName;
+        utils.PrintSystem.outBegin( location );
 
         String empty_String;
         empty_String = "";
@@ -24,21 +26,27 @@ public class Lab1_main
         empty_String_tab[0] = empty_String; //pierwsza komorka ma indeks 0
         main(empty_String_tab);
 
-        System.out.println("Lab1_main.main() /\\/\\/\\");
+        utils.PrintSystem.outEnd( location );
     }
 
     public static void main(String[] args)
     {
-        System.out.println("Lab1_main.main(args) \\/\\/\\/");
+        final String functionName = "main(String[] args)";
+        final String location = Lab1_main.class.getName() + " >>> " + functionName;
+        utils.PrintSystem.outBegin( location );
+
         baseExercises();
         System.out.println();
         homeExercises();
-        System.out.println("Lab1_main.main(args) /\\/\\/\\");
+
+        utils.PrintSystem.outEnd( location );
     }
 
     public static void baseExercises()
     {
-        System.out.println("baseExercises() \\/\\/\\/");
+        final String functionName = "baseExercises()";
+        final String location = Lab1_main.class.getName() + " >>> " + functionName;
+        utils.PrintSystem.outBegin( location );
 
         int i1;
         i1 = 1;
@@ -73,16 +81,20 @@ public class Lab1_main
         Matrix _m = new Matrix();
         _m.doSomething(i, o);
 
-        System.out.println("baseExercises() /\\/\\/\\");
+        utils.PrintSystem.outEnd( location );
     }
 
     public static void homeExercises()
     {
-        System.out.println("homeExercises \\/\\/\\/");
+        final String functionName = "homeExercises()";
+        final String location = Lab1_main.class.getName() + " >>> " + functionName;
+        utils.PrintSystem.outBegin( location );
+
         Exercise1.main();
         Exercise2.main();
         Exercise3.main();
-        System.out.println("homeExercises /\\/\\/\\");
+
+        utils.PrintSystem.outEnd( location );
     }
 
 }
