@@ -9,7 +9,7 @@ public class Exercise3 {
         final String location = Exercise3.class.getName() + " >>> " + functionName;
         utils.PrintSystem.outBegin( location );
 
-        System.out.println("Polymorphism");
+        System.out.println("Polymorphism and Inheritance");
         Part1.main();
         Part2.main();
 
