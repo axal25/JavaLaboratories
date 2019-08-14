@@ -2,6 +2,7 @@ package utils;
 
 public class ExceptionMessageGenerator {
     public static String getMessage( String callingClassName, String callingFunctionName, Exception e) {
+        final String functionName = "getMessage( String callingClassName, String callingFunctionName, Exception e)";
         String message = callingClassName + " >>> " + callingFunctionName + ": \n\r" +
                 "Exception class: " + e.getClass() + "\n\r" +
                 "Exception message: " + e.getMessage() + "\n\r" +
@@ -11,7 +12,8 @@ public class ExceptionMessageGenerator {
         try {
             Thread.sleep(50);
         } catch (InterruptedException ex) {
-            ex.printStackTrace();
+            String threadSleepExceptionMessage = ExceptionMessageGenerator.getMessage( ExceptionMessageGenerator.class.getName(), functionName, e);
+            return threadSleepExceptionMessage;
         }
         return message;
     }

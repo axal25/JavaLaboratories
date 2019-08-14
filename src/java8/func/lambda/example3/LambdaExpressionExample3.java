@@ -109,7 +109,7 @@ public class LambdaExpressionExample3 {
     public void nonStaticPerformPrintMessage( String message, @NotNull FunctionalInterface3 functionalInterface3) {
         message = wrapInnerMessageAroundOutter( message );
 
-        // without overriding functionalInterface3 implementation
+        // WITHOUT overriding functionalInterface3 implementation
 
         functionalInterface3.printMessage( message );
     }
@@ -117,6 +117,7 @@ public class LambdaExpressionExample3 {
     public void nonStaticPerformPrintMessageOverrideFunctionalInterface3Implementation( String message, @NotNull FunctionalInterface3 functionalInterface3) {
         message = wrapInnerMessageAroundOutter( message );
 
+        // OVERRIDING functionalInterface3 implementation
         functionalInterface3 = ( String messageForImplementationScope ) -> {
             final String lambdaFunctionName = "\"Override\" functionalInterface3 = ( String messageForImplementationScope ) -> {...};";
             final String lambdaLocation = FunctionalInterface1.class.getName() + " >>> " + lambdaFunctionName;

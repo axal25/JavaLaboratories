@@ -1,7 +1,7 @@
 package info;
 
 public class ToDo {
-    public static String[] whatIsLeftToDo = {
+    public static final String[] whatIsLeftToDo = {
             "4. ogarnac (zaczete)",
             "5. ogarnac (cale)",
             "6. solid - olać",
@@ -10,21 +10,14 @@ public class ToDo {
             "9. aplikacje sieciowe - ogarnac (zaczete)",
             "10. SQL/BD - ogarnac (zaczete)",
             "11. calc - nie obowiazuje",
-            "12. refleksja - olać"
+            "12. refleksja - olać",
+            "13. more Java8 functionallities"
     };
 
-    public static String[] getWhatIsLeftToDo() {
-        return whatIsLeftToDo;
-    }
-
-    public static void setWhatIsLeftToDo(String[] whatIsLeftToDo) {
-        ToDo.whatIsLeftToDo = whatIsLeftToDo;
-    }
-
-    public static String getWhatIsLeftToDo2String() {
+    public static String toFinalString() {
         String builtString = null;
         for ( String entry : whatIsLeftToDo ) {
-            if( builtString == null || builtString.isEmpty() || builtString.isBlank() ) {
+            if((builtString == null) || builtString.isEmpty()) {
                 builtString = "{ ";
             }
             else {
@@ -37,6 +30,6 @@ public class ToDo {
     }
 
     public static void printWhatIsLefttoDo() {
-        System.out.println(getWhatIsLeftToDo2String());
+        System.out.println( toFinalString() );
     }
 }
